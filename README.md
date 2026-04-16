@@ -4,6 +4,11 @@ A React-based web application built using **Vite, React, Tailwind CSS, and Mater
 
 ---
 
+## Live link:
+```bash
+https://koin-x-assignment-black.vercel.app/
+```
+
 ## 🛠️ Tech Stack
 
 - React 19
@@ -68,4 +73,7 @@ http://localhost:5173
 
 <img width="403" height="716" alt="image" src="https://github.com/user-attachments/assets/6512f967-6c94-4bbd-bb39-938206168937" />
 
+---
 
+### Author
+Anindita Chakraborty
