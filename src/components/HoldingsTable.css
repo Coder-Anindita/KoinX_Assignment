@@ -1,0 +1,283 @@
+/* ─────────────────────────────────────────────────────────
+   HoldingsTable.css
+   ───────────────────────────────────────────────────────── */
+
+/* ── Design tokens ─────────────────────────────────────── */
+:root {
+  --ht-card-bg:      #161b27;
+  --ht-header-bg:    #1a2035;
+  --ht-row-hover:    #1e2640;
+  --ht-border:       #252d45;
+  --ht-text-white:   #e8eaf0;
+  --ht-text-muted:   #6b7aaa;
+  --ht-gain-green:   #2ecc71;
+  --ht-loss-red:     #e74c3c;
+  --ht-link-blue:    #4c8bf5;
+  --ht-selected-bg:  rgba(76, 139, 245, 0.08);
+  --ht-shadow:       0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Card wrapper ──────────────────────────────────────── */
+.ht-card {
+  background:    var(--ht-card-bg) !important;
+  border:        1px solid var(--ht-border) !important;
+  border-radius: 12px !important;
+  box-shadow:    var(--ht-shadow) !important;
+  overflow:      hidden !important;
+}
+
+.ht-card-content {
+  padding: 0 !important;
+}
+.ht-card-content:last-child {
+  padding-bottom: 0 !important;
+}
+
+/* ── Title area ────────────────────────────────────────── */
+.ht-title-area {
+  padding: 20px 24px 12px;
+}
+
+.ht-title {
+  color:white !important;
+  font-size:   1rem !important;
+  font-weight: 700 !important;
+}
+
+/* ── Table scroll wrapper ──────────────────────────────── */
+.ht-table-wrap {
+  overflow-x: auto;
+}
+
+/* ── Table base ────────────────────────────────────────── */
+.ht-table {
+  min-width: 700px;
+}
+
+/* ── Header row ────────────────────────────────────────── */
+.ht-header-cell {
+  background:     black !important;
+  color:          white !important;
+  font-weight:    600 !important;
+  font-size:      0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  white-space:    nowrap !important;
+  border-bottom:  1px solid var(--ht-border) !important;
+  padding:        14px 12px !important;
+}
+
+.ht-header-sub {
+  display:     block;
+  color:       var(--ht-text-muted);
+  font-size:   0.65rem;
+  margin-top:  2px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Body rows ─────────────────────────────────────────── */
+.ht-body-row {
+  cursor:     pointer;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.ht-body-row:hover {
+  background: var(--ht-row-hover) !important;
+}
+
+.ht-body-row.ht-row-selected {
+  background: var(--ht-selected-bg) !important;
+}
+
+.ht-body-row.ht-row-selected:hover {
+  background: var(--ht-row-hover) !important;
+}
+
+/* ── Body cells ────────────────────────────────────────── */
+.ht-body-cell {
+  border-bottom: 1px solid var(--ht-border) !important;
+  color:         var(--ht-text-white) !important;
+  padding:       14px 12px !important;
+}
+
+/* ── Asset cell ────────────────────────────────────────── */
+.ht-asset-wrap {
+  display:     flex;
+  align-items: center;
+  gap:         10px;
+}
+
+.ht-avatar {
+  width:  30px !important;
+  height: 30px !important;
+  border: 1px solid var(--ht-border) !important;
+}
+
+.ht-asset-name {
+  color:       var(--ht-text-white) !important;
+  font-weight: 700 !important;
+  font-size:   0.875rem !important;
+  line-height: 1.3 !important;
+}
+
+.ht-asset-sub {
+  color:     var(--ht-text-muted) !important;
+  font-size: 0.72rem !important;
+}
+
+/* ── Holdings cell ─────────────────────────────────────── */
+.ht-holding-amount {
+  color:       var(--ht-text-white) !important;
+  font-weight: 600 !important;
+  font-size:   0.875rem !important;
+  line-height: 1.3 !important;
+}
+
+.ht-holding-rate {
+  color:     var(--ht-text-muted) !important;
+  font-size: 0.72rem !important;
+}
+
+/* ── Total current value cell ──────────────────────────── */
+.ht-total-value {
+  color:       var(--ht-text-white) !important;
+  font-weight: 600 !important;
+  font-size:   0.875rem !important;
+  line-height: 1.3 !important;
+}
+
+.ht-total-value.ht-selected {
+  color: var(--ht-gain-green) !important;
+}
+
+/* ── Gain cell (shared for ST & LT) ────────────────────── */
+.ht-gain-value {
+  font-weight: 600;
+  font-size:   0.875rem;
+  line-height: 1.3;
+}
+
+.ht-gain-value.gain {
+  color: var(--ht-gain-green);
+}
+
+.ht-gain-value.loss {
+  color: var(--ht-loss-red);
+}
+
+.ht-gain-sub {
+  color:     var(--ht-text-muted) !important;
+  font-size: 0.72rem !important;
+}
+
+/* ── Sell amount cell ──────────────────────────────────── */
+.ht-sell-amount {
+  color:       var(--ht-text-white) !important;
+  font-weight: 600 !important;
+  font-size:   0.875rem !important;
+}
+
+.ht-sell-dash {
+  color: var(--ht-text-muted) !important;
+}
+
+/* ── Checkboxes ────────────────────────────────────────── */
+.ht-checkbox {
+  color: var(--ht-text-muted) !important;
+}
+
+.ht-checkbox.Mui-checked {
+  color: var(--ht-link-blue) !important;
+}
+
+/* ── View-all footer ───────────────────────────────────── */
+.ht-footer {
+  padding:    12px 24px;
+  border-top: 1px solid var(--ht-border);
+}
+
+.ht-view-all-btn {
+  color:          var(--ht-link-blue) !important;
+  text-transform: none !important;
+  font-weight:    600 !important;
+  font-size:      0.82rem !important;
+  padding:        0 !important;
+  min-width:      0 !important;
+  background:     transparent !important;
+}
+
+.ht-view-all-btn:hover {
+  background:      transparent !important;
+  text-decoration: underline !important;
+}
+.ht-header-sortable {
+  cursor: pointer;
+  user-select: none;        /* prevent accidental text selection on rapid clicks */
+}
+ 
+.ht-header-sortable:hover {
+  background-color: rgba(255, 255, 255, 0.06); /* subtle hover tint */
+}
+ 
+/* Flex wrapper so the label and icon sit side-by-side */
+.ht-sort-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+ 
+/* Neutral ↕ icon shown on inactive columns */
+.ht-sort-icon {
+  font-size: 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+ 
+.ht-sort-neutral {
+  opacity: 0.35;
+}
+ 
+/* Active ↑ / ↓ icon — inherits the header text colour, full opacity */
+.ht-sort-active {
+  opacity: 1;
+  font-weight: 700;
+}
+.ht-header-sortable {
+  cursor: pointer;
+  user-select: none;        /* prevent accidental text selection on rapid clicks */
+}
+ 
+.ht-header-sortable:hover {
+  background-color: rgba(255, 255, 255, 0.06); /* subtle hover tint */
+}
+ 
+/* Flex wrapper so the label and icon sit side-by-side */
+.ht-sort-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+ 
+/* Neutral ↕ icon shown on inactive columns */
+.ht-sort-icon {
+  font-size: 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+ 
+.ht-sort-neutral {
+  opacity: 0.35;
+}
+ 
+/* Active ↑ / ↓ icon — inherits the header text colour, full opacity */
+.ht-sort-active {
+  opacity: 1;
+  font-weight: 700;
+}

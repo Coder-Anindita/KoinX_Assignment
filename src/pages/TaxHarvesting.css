@@ -1,0 +1,44 @@
+.outer {
+  background-color: #0d0f1a;
+  color: white;
+  min-height: 100vh;
+}
+
+.Heading {
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: inline;
+  color: white;
+}
+
+.main {
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.HowItWorks {
+  color: #4a78ff;
+  text-decoration: underline;
+  padding-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.MuiTooltip-tooltip {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15) !important;
+  font-size: 0.85rem !important;
+}
+
+.MuiTooltip-arrow {
+  color: white !important;
+}
+
+.MuiTooltip-arrow::before {
+  border: 1px solid #e0e0e0 !important;
+}

@@ -1,0 +1,108 @@
+.gains-card {
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  height: 100%;
+}
+
+.pre-card {
+  background-color: #1a1f2e !important;
+  border: 1px solid #2a2f42 !important;
+  color: white !important;
+}
+
+.after-card {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.gains-content {
+  padding: 20px !important;
+}
+
+.gains-title {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin-bottom: 16px !important;
+}
+
+/* Column headers row */
+.gains-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.gains-col-header {
+  font-size: 0.9rem !important;
+  color: #D1D7ED !important;
+  width: 30%;
+  text-align: right;
+}
+
+/* Data rows */
+.gains-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.gains-label {
+  font-size: 0.9rem !important;
+  color:white !important;
+  width: 40%;
+}
+
+.gains-value {
+  font-size: 0.9rem !important;
+  color: white !important;
+  width: 30%;
+  text-align: right;
+}
+
+.gains-bold {
+  font-weight: 600 !important;
+}
+
+/* Loss colors */
+
+
+
+
+
+/* Total row */
+.gains-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 4px 0;
+}
+
+.gains-total-label {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.gains-total-value {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  
+}
+
+/* Savings banner */
+.savings-banner {
+  margin-top: 12px;
+  
+  
+  padding: 10px 14px;
+}
+
+.savings-text {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: white !important;
+}
